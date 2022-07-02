@@ -1,0 +1,26 @@
+.taskItem{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    align-items: center;
+}
+
+.taskItem__left{
+    display: flex;
+}
+
+.taskItem__right{
+    display: flex;
+    justify-content: flex-end;
+    flex:1;
+}
+
+.taskItem__right__boxItem{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 25px;
+    height: 25px;
+    border-radius: 2px;
+    border: 1px solid grey;
+}

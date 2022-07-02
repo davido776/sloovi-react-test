@@ -1,0 +1,37 @@
+.task__form__body__item{
+    display: flex;
+    flex-direction: column;
+   
+    
+}
+
+.task__form__body__item > input,select{
+    margin-top: 5px;
+    padding: 4px;
+}
+
+.form__button__container{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+}
+
+.cancel__button{
+   background-color: transparent;
+   border:transparent;
+   outline: none;
+   margin-right: 20px;
+}
+
+.save__button{
+    width:100px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: green;
+    outline: none;
+    border: transparent;
+    border-radius: 3px;
+    color:white
+}

@@ -1,24 +1,40 @@
-import logo from './logo.svg';
+import { useEffect } from 'react';
 import './App.css';
 
+import TaskContainer from './components/Task/TaskContainer';
+import Header from './components/Header/Header';
+import Sidebar from './components/Sidebar/Sidebar';
+import agent from './api/agent'
+import {setTasks} from './redux/slices/taskSlice'
+import {useSelector,useDispatch} from "react-redux";
+
+
 function App() {
+  const dispatch = useDispatch()
+
+  useEffect(() => {
+    agent.getTask()
+     .then((res) =>{
+         dispatch(setTasks(res.data.results))
+         console.log(res.data.results)
+       })
+     .catch(err => console.log(err))
+    
+ },[])
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    
+      <div className="container">
+        <Sidebar/>
+        <div style={{flex:1}}>
+          <Header/>
+          <div style={{marginLeft:"20px",marginTop:"20px"}}>
+            <TaskContainer/>
+          </div>
+        </div>
+      </div>
+    
+    
   );
 }
 
