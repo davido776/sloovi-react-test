@@ -5,10 +5,10 @@ import AssignmentIcon from '@mui/icons-material/Assignment';
 import EditIcon from '@mui/icons-material/Edit';
 import CheckIcon from '@mui/icons-material/Check';
 import NotificationsIcon from '@mui/icons-material/Notifications';
-import {useSelector,useDispatch} from "react-redux";
-import { currentDisplay,changeDisplay,toggleEdit } from '../../redux/slices/displaySlice';
+import {useDispatch} from "react-redux";
+import { changeDisplay,toggleEdit } from '../../redux/slices/displaySlice';
 import { setCurrentTask } from '../../redux/slices/taskSlice';
-import {TASKLIST,CREATETASK} from "../../redux/commons/constants"
+import {CREATETASK} from "../../redux/commons/constants"
 
 
 function TaskItem(props) {

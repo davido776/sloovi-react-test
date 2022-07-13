@@ -1,54 +1,54 @@
-.task__form{
+.task__form {
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
     width: 300px;
-  
+
 }
 
-.task__form__header{
+.task__form__header {
     display: flex;
     justify-content: space-between;
     width: 300px;
-    
+
 }
 
-.task__form__header__left{
-    border:1px solid grey;
-    width:90%;
-    padding-left:10px;
-    padding-top:3px;
+.task__form__header__left {
+    border: 1px solid grey;
+    width: 90%;
+    padding-left: 10px;
+    padding-top: 3px;
     padding-bottom: 3px;
 }
 
-.open__form__button{
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   border:1px solid grey;
-   width: 10%;
+.open__form__button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid grey;
+    width: 10%;
 }
 
-.task__form__body{
-    
-    height: 270px;
+.task__form__body {
+
+    min-height: 270px;
     border: 1px solid grey;
     width: 100%;
-    
+
+
 }
 
-.create__taskForm__container{
-    background-color:#80BDE3;
-    height: 100%;
+.create__taskForm__container {
+    background-color: #80BDE3;
+    min-height: 270px;
     padding-left: 10px;
     padding-right: 10px;
     padding-top: 10px;
-      
-
+    padding-bottom: 10px;
 }
 
-.taskList__container{
+.taskList__container {
     padding-left: 10px;
     padding-right: 10px;
     padding-top: 10px;
-      
-}
+    padding-bottom: 10px;
 
+}

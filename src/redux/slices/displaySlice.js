@@ -1,8 +1,8 @@
 import { createSlice } from "@reduxjs/toolkit";
-import {TASKLIST,CREATETASK} from "../commons/constants";
+import {TASKLIST} from "../commons/constants";
 
 const initialState = {
-  display:CREATETASK,
+  display:TASKLIST,
   edit:false
 };
 

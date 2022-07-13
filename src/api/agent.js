@@ -1,21 +1,25 @@
 import axios from 'axios'
 
-const access_token = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2NTQ5NTg5NDAsIm5iZiI6MTY1NDk1ODk0MCwianRpIjoiMDBhZGE3MmYtMmIzYy00YmFjLWJjZjUtNjRhMTZjOGYzN2I3IiwiaWRlbnRpdHkiOnsibmFtZSI6IlN1bmRhciBQaWNoYWkiLCJlbWFpbCI6InNtaXRod2lsbHMxOTg5QGdtYWlsLmNvbSIsInVzZXJfaWQiOiJ1c2VyXzRlZTRjZjY3YWQ0NzRhMjc5ODhiYzBhZmI4NGNmNDcyIiwiaWNvbiI6Imh0dHA6Ly93d3cuZ3JhdmF0YXIuY29tL2F2YXRhci9jZjk0Yjc0YmQ0MWI0NjZiYjE4NWJkNGQ2NzRmMDMyYj9kZWZhdWx0PWh0dHBzJTNBJTJGJTJGczMuc2xvb3ZpLmNvbSUyRmF2YXRhci1kZWZhdWx0LWljb24ucG5nIiwiYnlfZGVmYXVsdCI6Im91dHJlYWNoIn0sImZyZXNoIjpmYWxzZSwidHlwZSI6ImFjY2VzcyJ9.dX5xl-Qy8rXZUpmmvXCbyDdEaWS5k4B1MK967Mua-OM"
-const userId = "user_4ee4cf67ad474a27988bc0afb84cf472"
+const access_token = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2NTc2MjY5NTgsIm5iZiI6MTY1NzYyNjk1OCwianRpIjoiOTEwYzVmYjQtMDNjNC00OTkwLWE1OTctN2QzMzkwZGIyNmZhIiwiaWRlbnRpdHkiOnsibmFtZSI6IlN1bmRhciBQaWNoYWkiLCJlbWFpbCI6InNtaXRod2lsbHMxOTg5QGdtYWlsLmNvbSIsInVzZXJfaWQiOiJ1c2VyXzRlZTRjZjY3YWQ0NzRhMjc5ODhiYzBhZmI4NGNmNDcyIiwiaWNvbiI6Imh0dHA6Ly93d3cuZ3JhdmF0YXIuY29tL2F2YXRhci9jZjk0Yjc0YmQ0MWI0NjZiYjE4NWJkNGQ2NzRmMDMyYj9kZWZhdWx0PWh0dHBzJTNBJTJGJTJGczMuc2xvb3ZpLmNvbSUyRmF2YXRhci1kZWZhdWx0LWljb24ucG5nIiwiYnlfZGVmYXVsdCI6Im91dHJlYWNoIn0sImZyZXNoIjpmYWxzZSwidHlwZSI6ImFjY2VzcyJ9.hiStAz6mQ8ZhT6sV3sA2_Q5JdDoaVzpxlAW3cAGoz1A"
+//const userId = "user_4ee4cf67ad474a27988bc0afb84cf472"
 const companyId = "company_413ef22b6237417fb1fba7917f0f69e7"
-const userName = "Saravanan C"
+//const userName = "Saravanan C"
 
 //get tasks
 
-const body = {
-    headers:{
-        'Authorization': `Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2NTQ5NTg5NDAsIm5iZiI6MTY1NDk1ODk0MCwianRpIjoiMDBhZGE3MmYtMmIzYy00YmFjLWJjZjUtNjRhMTZjOGYzN2I3IiwiaWRlbnRpdHkiOnsibmFtZSI6IlN1bmRhciBQaWNoYWkiLCJlbWFpbCI6InNtaXRod2lsbHMxOTg5QGdtYWlsLmNvbSIsInVzZXJfaWQiOiJ1c2VyXzRlZTRjZjY3YWQ0NzRhMjc5ODhiYzBhZmI4NGNmNDcyIiwiaWNvbiI6Imh0dHA6Ly93d3cuZ3JhdmF0YXIuY29tL2F2YXRhci9jZjk0Yjc0YmQ0MWI0NjZiYjE4NWJkNGQ2NzRmMDMyYj9kZWZhdWx0PWh0dHBzJTNBJTJGJTJGczMuc2xvb3ZpLmNvbSUyRmF2YXRhci1kZWZhdWx0LWljb24ucG5nIiwiYnlfZGVmYXVsdCI6Im91dHJlYWNoIn0sImZyZXNoIjpmYWxzZSwidHlwZSI6ImFjY2VzcyJ9.dX5xl-Qy8rXZUpmmvXCbyDdEaWS5k4B1MK967Mua-OM`,
-        'Accept': 'application/json',
-        'Content-Type': 'application/json',
-    }
+// const body = {
+//     headers:{
+//         'Authorization': `Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2NTQ5NTg5NDAsIm5iZiI6MTY1NDk1ODk0MCwianRpIjoiMDBhZGE3MmYtMmIzYy00YmFjLWJjZjUtNjRhMTZjOGYzN2I3IiwiaWRlbnRpdHkiOnsibmFtZSI6IlN1bmRhciBQaWNoYWkiLCJlbWFpbCI6InNtaXRod2lsbHMxOTg5QGdtYWlsLmNvbSIsInVzZXJfaWQiOiJ1c2VyXzRlZTRjZjY3YWQ0NzRhMjc5ODhiYzBhZmI4NGNmNDcyIiwiaWNvbiI6Imh0dHA6Ly93d3cuZ3JhdmF0YXIuY29tL2F2YXRhci9jZjk0Yjc0YmQ0MWI0NjZiYjE4NWJkNGQ2NzRmMDMyYj9kZWZhdWx0PWh0dHBzJTNBJTJGJTJGczMuc2xvb3ZpLmNvbSUyRmF2YXRhci1kZWZhdWx0LWljb24ucG5nIiwiYnlfZGVmYXVsdCI6Im91dHJlYWNoIn0sImZyZXNoIjpmYWxzZSwidHlwZSI6ImFjY2VzcyJ9.dX5xl-Qy8rXZUpmmvXCbyDdEaWS5k4B1MK967Mua-OM`,
+//         'Accept': 'application/json',
+//         'Content-Type': 'application/json',
+//     }
+// }
+
+const test = () => {
+    console.log("testing...")
 }
 
-const getTask = async () => {
+const getTasks = async () => {
     // const tasks = await fetch(`https://stage.api.sloovi.com/task/lead_465c14d0e99e4972b6b21ffecf3dd691?company_id=${companyId}`,{
     //     method: "GET",
     //     Headers:{
@@ -44,7 +48,8 @@ const getTask = async () => {
 
 //create task
 
-const createTask = async (task) => {
+export const createTask = async (task) => {
+    console.log(task)
     const tasks = await axios.post(`https://stage.api.sloovi.com/task/lead_465c14d0e99e4972b6b21ffecf3dd691?company_id=${companyId}`,task,{
         headers:{
             'Authorization': 'Bearer ' + access_token,
@@ -84,7 +89,9 @@ const deleteTask = async (taskId) => {
     return response
 }
 
-const agent ={getTask,createTask,updateTask,deleteTask}
 
-export default agent
+
+const agent = {getTasks,createTask,updateTask,deleteTask,test}
+
+export default agent;
 

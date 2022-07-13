@@ -19,14 +19,14 @@ export const taskSlice = createSlice({
     },
 
     editTask:(state,action) => {
-       const taskIndex = state.tasks.findIndex(t => t.id == action.payload.id)
+       const taskIndex = state.tasks.findIndex(t => t.id === action.payload.id)
        state.tasks[taskIndex] = action.payload;
     },
     removeTask : (state,action) => {
         state.tasks = state.tasks.filter(t => t.id !== action.payload)
     },
     setCurrentTask : (state,action) =>{
-        const task = state.tasks.find(t => t.id == action.payload)
+        const task = state.tasks.find(t => t.id === action.payload)
         state.currentTask = task;
     },
     clearCurrentTask : (state,action) => {
